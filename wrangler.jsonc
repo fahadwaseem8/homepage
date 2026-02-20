@@ -1,0 +1,7 @@
+{
+  "name": "homepage", // Important: Change this to the exact name of your Cloudflare project
+  "compatibility_date": "2026-02-20",
+  "assets": {
+    "directory": "."
+  }
+}
