@@ -138,13 +138,13 @@ body::before {
 /* Profile Section */
 .profile {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 .avatar {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 20px;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
     border-radius: 50%;
     background: var(--avatar-bg);
     border: 2px solid var(--border-color);
@@ -162,22 +162,22 @@ body::before {
 }
 
 .initial {
-    font-size: 40px;
+    font-size: 26px;
     font-weight: 600;
     color: var(--avatar-text);
     user-select: none;
 }
 
 .name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     transition: color 0.3s ease;
 }
 
 .bio {
-    font-size: 15px;
+    font-size: 13px;
     color: var(--text-secondary);
     transition: color 0.3s ease;
 }
@@ -200,6 +200,7 @@ body::before {
 .links .link-button:nth-child(4) { animation-delay: 0.32s; }
 .links .link-button:nth-child(5) { animation-delay: 0.40s; }
 .links .link-button:nth-child(6) { animation-delay: 0.48s; }
+.links .link-button:nth-child(7) { animation-delay: 0.56s; }
 
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(14px); }
@@ -210,6 +211,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 14px;
     padding: 16px 20px;
     background: var(--link-bg);
     border: 1px solid var(--border-color);
@@ -269,6 +271,22 @@ body::before {
     font-weight: 400;
 }
 
+.link-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+    transition: color 0.22s ease;
+}
+
+[data-platform="email"]:hover .link-icon    { color: var(--accent); }
+[data-platform="github"]:hover .link-icon   { color: var(--text-primary); }
+[data-platform="linkedin"]:hover .link-icon { color: #0a66c2; }
+[data-platform="twitter"]:hover .link-icon  { color: #1d9bf0; }
+[data-platform="instagram"]:hover .link-icon { color: #e1306c; }
+[data-platform="facebook"]:hover .link-icon  { color: #1877f2; }
+[data-platform="steam"]:hover .link-icon     { color: #1b9af0; }
+
 .link-arrow {
     opacity: 0.4;
     transition: all 0.22s ease;
@@ -279,11 +297,6 @@ body::before {
     opacity: 1;
     color: var(--accent);
     transform: translate(3px, -3px);
-}
-
-.link-button:hover .link-arrow {
-    opacity: 1;
-    transform: translate(2px, -2px);
 }
 
 /* Responsive Design */
